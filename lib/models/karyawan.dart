@@ -1,6 +1,6 @@
 class Karyawan {
   final String nama;
-  final String umur;
+  final int umur;
   final Alamat alamat;
   final List<String> hobi;
 
@@ -12,9 +12,9 @@ class Karyawan {
 
   factory Karyawan.fromJson(Map<String, dynamic> json) {
     return Karyawan(
-      nama: json['jalan'],
-      umur: json['kota'],
-      alamat: Alamat.fromJson(json['provinsi']),
+      nama: json['nama'],
+      umur: json['umur'],
+      alamat: Alamat.fromJson(json['alamat']),
       hobi: List<String>.from(json['hobi']),
     );
   }

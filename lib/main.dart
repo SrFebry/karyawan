@@ -29,7 +29,7 @@ class MyHomePage extends StatelessWidget {
   const MyHomePage({super.key});
 
   Future<List<Karyawan>> _readJsonData() async {
-    final String response = await rootBundle.loadString('assets\karyawan.json');
+    final String response = await rootBundle.loadString('assets/karyawan.json');
     final List<dynamic> data = json.decode(response);
     return data.map((json) => Karyawan.fromJson(json)).toList();
   }
@@ -56,8 +56,8 @@ class MyHomePage extends StatelessWidget {
                     subtitle: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Text('Umur: $snapshot.data![index].umur'),
-                        Text('Alamat: $snapshot.data![index].alamat.jalan'
+                        Text('Umur: ${snapshot.data![index].umur}'),
+                        Text('Alamat: ${snapshot.data![index].alamat.jalan}'
                         '${snapshot.data![index].alamat.kota},'
                         '${snapshot.data![index].alamat.provinsi},'),
                       ],
